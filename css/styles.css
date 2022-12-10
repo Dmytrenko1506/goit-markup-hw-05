@@ -32,6 +32,11 @@ ul {
   margin: 0;
   padding: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .list {
   list-style: none;
@@ -84,6 +89,11 @@ ul {
 .site-nav {
   display: flex;
 }
+.site-nav .item {
+  position: relative;
+}
+
+
 
 .site-nav.list {
   margin-left: 93px;
@@ -305,9 +315,7 @@ ul {
   justify-content: space-between;
 }
 
-.team .developer {
-  display: block;
-}
+
 
 .team-card {
   background-color: var(--white-color);
@@ -485,6 +493,19 @@ ul {
 .site-nav .current {
   color: var(--accent-color);
 }
+.current::after {
+  position: absolute;
+  display: block;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  translate: -50%;
+  width: 108%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 
 /* --Connect-- */
 .connect {
@@ -552,7 +573,7 @@ display: flex;
   margin-bottom: 50px;
 }
 
-.filter-item+.filter-item {
+.filter-item + .filter-item {
   margin-left: 8px;
 }
 
@@ -588,21 +609,34 @@ display: flex;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-/* .project-card {
-  width: calc((100% - 2 * 30px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-.project-card:nth-child(3n) {
-  margin-right: 0;
-}
-.project-card:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} */
-.project-card .wiev {
-  display: block;
-}
 
+
+.project-img {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition: 250ms opacity linear;
+  transition-property: ;
+}
+.overlay-text {
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    
+}
+.project-card:hover .overlay {
+  opacity: 1;
+}
 .project-thumb {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
@@ -614,9 +648,6 @@ display: flex;
   margin-bottom: 4px;
 }
 
-/* .project-card {
-  border: 1px solid #eeeeee;
-} */
 
 .desc {
   color: var(--primery-text-color);
