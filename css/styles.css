@@ -69,7 +69,7 @@ img {
 .navigation {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+
 }
 
 /* Logo */
@@ -89,11 +89,10 @@ img {
 .site-nav {
   display: flex;
 }
+
 .site-nav .item {
   position: relative;
 }
-
-
 
 .site-nav.list {
   margin-left: 93px;
@@ -112,11 +111,15 @@ img {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 /* --Auth Nav-- */
@@ -151,10 +154,11 @@ img {
 
 .auth-nav .link {
   color: var(--primery-text-color);
-
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 .link.envelope {
@@ -181,6 +185,8 @@ img {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 /* --Hero-- */
@@ -221,15 +227,18 @@ img {
   letter-spacing: 0.06em;
   border: none;
   cursor: pointer;
-
   padding: 10px 32px;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, background-color;
 }
 
 .btn-hero:hover,
 .btn-hero:focus {
   background-color: var(--btn-active-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, background-color;
 }
 
 /* --Benefits-- */
@@ -278,10 +287,6 @@ img {
 }
 
 
-/* .benefits-item + .benefits-item {
-  margin-left: 30px;
-} */
-
 /* --Portfolio-- */
 
 .section.portfolio {
@@ -294,7 +299,7 @@ img {
 }
 
 .portfolio-item {
-  display: flex;
+ position: relative;
 }
 
 .portfolio .title {
@@ -303,6 +308,21 @@ img {
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+}
+
+.label {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  padding: 27px 0;
+  bottom: 0%;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(47, 48, 58, 0.8);
 }
 
 /* --Team-- */
@@ -314,8 +334,6 @@ img {
   display: flex;
   justify-content: space-between;
 }
-
-
 
 .team-card {
   background-color: var(--white-color);
@@ -372,13 +390,16 @@ img {
   border-radius: 50%;
   cursor: pointer;
   color: #afb1b8;
-
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .social-icons:hover,
 .social-icons:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .icon {
@@ -413,6 +434,8 @@ img {
   border: 1px solid;
   border-radius: 4px;
   color: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .icon-client {
@@ -420,14 +443,15 @@ img {
   width: 106px;
   height: 60px;
   fill: currentColor;
+ 
 }
 
 .client-link:hover,
 .client-link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
-
-
 
 
 /* --Footer-- */
@@ -444,12 +468,7 @@ img {
   align-items: baseline;
 }
 
-/* .footer-logo {
-  color: var(--white-color);
-}
-.map-link {
-  color: var(--white-color);
-} */
+
 .footer-logo {
   display: inline-block;
   color: var(--white-color);
@@ -470,20 +489,28 @@ img {
 .map.link:hover,
 .map.link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .address .link:hover,
 .address .link:focus {
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .address .link {
   color: var(--link-address-color);
   font-style: normal;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .map.link {
   color: var(--white-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 .address .list {
@@ -500,7 +527,7 @@ img {
   bottom: 0;
   left: 50%;
   translate: -50%;
-  width: 108%;
+  width: 100%;
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
@@ -528,9 +555,6 @@ img {
 
 }
 
-/* .social-list.list {
-display: flex;
-} */
 
 /* PORTFOLIO HTML */
 .btn-filter.current-color {
@@ -543,13 +567,14 @@ display: flex;
   background-color: var(--secondary-bgc-color);
   font-family: 'Roboto';
   font-weight: 500;
-
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
   border: none;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, background-color;
 }
 
 .btn-filter:hover,
@@ -560,6 +585,8 @@ display: flex;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow, background-color;
 }
 
 .btn-filter:active {
@@ -603,39 +630,38 @@ display: flex;
 }
 .project-link {
   display: block;
+  transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-link:hover, 
 .project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 
 .project-img {
   position: relative;
+  overflow: hidden;
 }
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  opacity: 0;
-  transition: 250ms opacity linear;
-  transition-property: ;
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 .overlay-text {
 
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
-    color: #FFFFFF;
+    color:var(--white-color);
     
 }
-.project-card:hover .overlay {
-  opacity: 1;
+.project-link:hover .overlay,
+.project-link:focus .overlay {
+  transform: translateY(-100%);
 }
 .project-thumb {
   padding: 20px 24px;
